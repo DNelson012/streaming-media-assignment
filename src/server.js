@@ -16,7 +16,7 @@ const URLStruct = {
 };
 
 const onRequest = (request, response) => {
-  console.log(request.url);
+  //console.log(request.url);
   const parsedUrl = url.parse(request.url);
 
   if (URLStruct[parsedUrl.pathname]) {
@@ -27,5 +27,5 @@ const onRequest = (request, response) => {
 };
 
 http.createServer(onRequest).listen(port, () => {
-  console.log(`Listening on 127.0.0.1:${port}`);
+  //console.log(`Listening on 127.0.0.1:${port}`);
 });
